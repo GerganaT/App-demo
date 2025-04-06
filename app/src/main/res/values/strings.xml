@@ -1,3 +1,35 @@
 <resources>
     <string name="app_name">App demo</string>
+
+    <!-- CryptoItemsScreen  -->
+    <string name="price_change_percent_format">%.2f%%</string>
+    <string name="bid_ask_label">bid/ask:</string>
+    <string name="bid_ask_price_format">%1$.4f / %2$.4f</string>
+    <string name="error_label">"Something went wrong. \n Check your internet connectivity
+        and try again by pulling the widget from the top of your screen."</string>
+
+    <!-- CryptoItemDetailsScreen  -->
+    <string name="crypto_details_title">Crypto details</string>
+    <string name="back_button_description">Localized description</string>
+    <string name="symbol_label">Symbol</string>
+    <string name="price_change_label">Price change</string>
+    <string name="price_change_percent_label">Price change percent</string>
+    <string name="weighted_avg_price_label">Weighted Avg Price</string>
+    <string name="prev_close_price_label">Previous Close Price</string>
+    <string name="last_price_label">Last Price</string>
+    <string name="last_qty_label">Last Quantity</string>
+    <string name="bid_price_label">Bid Price</string>
+    <string name="bid_qty_label">Bid Quantity</string>
+    <string name="ask_price_label">Ask Price</string>
+    <string name="ask_qty_label">Ask Quantity</string>
+    <string name="open_price_label">Open Price</string>
+    <string name="high_price_label">High Price</string>
+    <string name="low_price_label">Low Price</string>
+    <string name="volume_label">Volume</string>
+    <string name="quote_volume_label">Quote Volume</string>
+    <string name="open_time_label">Open Time</string>
+    <string name="close_time_label">Close Time</string>
+    <string name="first_id_label">First ID</string>
+    <string name="last_id_label">Last ID</string>
+    <string name="count_label">Count</string>
 </resources>

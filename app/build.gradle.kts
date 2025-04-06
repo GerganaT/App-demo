@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.serialization)
+    id("com.google.devtools.ksp")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -24,8 +27,7 @@ android {
         release {
             isMinifyEnabled = false
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
             )
         }
     }
@@ -54,6 +56,9 @@ dependencies {
     // Kotlin extensions
     implementation(libs.androidx.core.ktx)
 
+    // Kotlin JSON serialization
+    implementation(libs.kotlinx.serialization.json)
+
     //Kotlin lifecycle - related extensions
     implementation(libs.androidx.lifecycle.runtime.ktx)
 
@@ -75,8 +80,37 @@ dependencies {
     //Compose "Material-You" Design Components library
     implementation(libs.androidx.material3)
 
+    //Compose Android lifecycle tools
+    implementation(libs.androidx.lifecycle.runtime.compose)
+
+    //Compose navigation
+    implementation(libs.androidx.compose.navigation)
+
     //Retrofit
     implementation(libs.retrofit)
+    //Moshi implementation for Retrofit
+    implementation(libs.retrofit.moshi.converter)
+
+    //Moshi
+    implementation(libs.moshi)
+
+    //Network request logger
+    implementation(libs.logging.interceptor)
+
+    //Coroutines
+    implementation(libs.kotlin.standard.library)
+    implementation(libs.coroutines.core)
+    implementation(libs.coroutines.android)
+
+    //Hilt
+    implementation(libs.hilt.android)
+    implementation(libs.androidx.hilt.navigation.compose)
+    ksp(libs.hilt.android.compiler)
+
+    //Room
+    implementation(libs.room)
+    implementation(libs.room.ktx)
+    ksp(libs.room.compiler)
 
     // Test - related libraries
     //Unit testing library
@@ -92,7 +126,7 @@ dependencies {
     //Compose testing integration with JUnit4
     androidTestImplementation(libs.androidx.ui.test.junit4)
 
-   //Compose UI tools
+    //Compose UI tools
     debugImplementation(libs.androidx.ui.tooling)
 
     //Compose testing library that should be added as a debugImplementation dependency

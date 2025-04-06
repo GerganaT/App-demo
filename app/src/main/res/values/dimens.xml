@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- CryptoItemsScreen -->
+    <dimen name="crypto_item_padding">4dp</dimen>
+    <dimen name="crypto_items_padding">16dp</dimen>
+    <dimen name="error_layout_padding">16dp</dimen>
+
+    <!-- CryptoItemDetailsScreen -->
+    <dimen name="crypto_details_padding_xs">2dp</dimen>
+    <dimen name="crypto_details_padding_mid">8dp</dimen>
+
+</resources>
